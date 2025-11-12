@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(30deg, #800000, #003300, #001f3f); /* Maroon, Darkest Green, Darkest Blue */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rotating-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    height: 40px; /* Height to accommodate the text */
+    position: relative;
+}
+
+.rotating-text #typedText {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ecf0f1;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ecf0f1; }
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: #ecf0f1;
+    }
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a5276;
+    transform: translateY(-2px);
+}
+
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.color-box {
+    width: 22%;
+    padding-bottom: 22%;
+    margin: 1%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.color-box span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.color-box:hover .copy-button {
+    opacity: 1;
+}
+.red{
+    color:maroon;
+}
+div.red{
+    text-align:center;
+    }

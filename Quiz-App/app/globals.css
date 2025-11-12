@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: black; /* Background color */
+    --foreground: white; /* Default text color */
+    --card: white; /* Card background */
+    --card-foreground: black; /* Card text color */
+  }
+
+  body {
+    @apply bg-background text-foreground; /* Apply background and text color */
+  }
+
+  .card {
+    background-color: var(--card); /* Card background */
+    color: var(--card-foreground); /* Card text color */
+  }
+
+  .quiz-text {
+    color: black; /* Ensure quiz text is black */
+  }
+}

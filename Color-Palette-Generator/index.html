@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="rotating-text">
+            <span id="typedText"></span>
+        </div>
+        <h1 class="title">Color Palette Generator</h1>
+        <input type="text" id="colorInput" placeholder="Enter a color (hex, RGB, or name)">
+        <button onclick="generatePalette()">Generate Palette</button>
+        <div class="palette" id="palette">
+            <!-- Colors will be generated here -->
+        </div>
+        <div>Made with <span class="red">♥ </span>by "Ayesha Mughal"</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>𝓣𝓮𝓶𝓹𝓮𝓻𝓪𝓽𝓾𝓻𝓮 𝓒𝓸𝓷𝓿𝓮𝓻𝓽𝓮𝓻</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-12 text-center">
+        <h1>𝓣𝓮𝓶𝓹𝓮𝓻𝓪𝓽𝓾𝓻𝓮 𝓒𝓸𝓷𝓿𝓮𝓻𝓽𝓮𝓻</h1>
+
+        <div class="form-group">
+          <label for="input-type" style="font-weight: bolder; color: black;">Select the type you want to convert from:</label>
+          <select class="form-control form-control-lg" id="input-type">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="output-type" style="font-weight: bold; color: black;">Select the type you want to convert to:</label>
+          <select class="form-control form-control-lg" id="output-type">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="number" class="form-control form-control-lg" id="input-value" placeholder="Enter temperature">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" id="output-value" placeholder="Converted temperature" readonly>
+        </div>
+
+        <button class="btn btn-primary btn-lg" onclick="convertTemperature()">Convert</button>
+        <button class="btn btn-secondary btn-lg" onclick="resetFields()">Reset</button>
+      </div>
+    </div>
+
+    <footer>
+      Made with <span class="footer-heart">♥</span> By Ayesha Mughal
+    </footer>
+  </div>
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
+
